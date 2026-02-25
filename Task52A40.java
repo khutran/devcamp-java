@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class Task52A40 {
 
     public static void main(String[] args) {
         System.out.println("--- Kết quả Task 52A.40 (Mảng nâng cao) ---");
