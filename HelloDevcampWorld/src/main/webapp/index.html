@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello world</title>
+    <style>
+        #apiMsg {
+            background: #f6a63a;
+            display: none;
+            padding: 4px 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello world</h1>
+    <p id="apiMsg"></p>
+    <h1>Hello Devcamp world application!</h1>
+
+    <script>
+        (async () => {
+            try {
+                const res = await fetch('/api/hello');
+                if (!res.ok) throw new Error();
+                const msg = await res.text();
+                const el = document.getElementById('apiMsg');
+                el.textContent = msg;
+                el.style.display = 'inline-block';
+            } catch (e) {
+                // API chưa sẵn sàng thì không hiện chữ vàng
+            }
+        })();
+    </script>
+</body>
+
+</html>
