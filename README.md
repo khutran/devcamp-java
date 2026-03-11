@@ -1,0 +1,61 @@
+# Devcamp Java Projects
+
+Tổng hợp các bài tập và dự án Spring Boot tại Devcamp.
+
+## Các dự án REST API
+
+Dưới đây là danh sách các dự án Spring Boot REST API trong repository này:
+
+### 1. [RectangleRestAPI](./RectangleRestAPI)
+Dự án cung cấp các API để tính diện tích và chu vi của hình chữ nhật.
+- **Endpoints:** `/rectangle-area`, `/rectangle-perimeter`
+
+### 2. [OddEvenNumberAPI](./OddEvenNumberAPI)
+Dự án kiểm tra một số là chẵn hay lẻ.
+- **Endpoints:** `/checknumber`
+
+### 3. [StringLengthAPI](./StringLengthAPI)
+Dự án tính chiều dài của một chuỗi đầu vào.
+- **Endpoints:** `/length`
+
+### 4. [CircleRestAPI](./CircleRestAPI)
+Dự án tính diện tích hình tròn.
+- **Endpoints:** `/circle-area`
+
+### 5. [RainbowRestAPI](./RainbowRestAPI)
+Dự án trả về danh sách màu sắc của cầu vồng.
+- **Endpoints:** `/rainbow`
+
+### 6. [SplitStringAPI](./SplitStringAPI)
+Dự án tách chuỗi thành danh sách các từ.
+- **Endpoints:** `/split`
+
+### 7. [EmployeeRestAPI](./EmployeeRestAPI)
+Dự án quản lý thông tin nhân viên.
+- **Endpoints:** `/employees`
+
+### 8. [InvoiceRestAPI](./InvoiceRestAPI)
+Dự án quản lý các mục trong hóa đơn.
+- **Endpoints:** `/invoices`
+
+### 9. [AccountRestAPI](./AccountRestAPI)
+Dự án quản lý tài khoản người dùng.
+- **Endpoints:** `/accounts`
+
+### 10. [BookAuthorClass](./BookAuthorClass)
+Dự án quản lý thông tin Sách và Tác giả.
+
+## Cách chạy các dự án
+
+Mỗi dự án là một project Spring Boot độc lập. Để chạy một dự án:
+
+1. Di chuyển vào thư mục của dự án đó.
+2. Chạy lệnh:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
+   (Hoặc sử dụng extension Spring Boot Dashboard trong VS Code)
+
+## Yêu cầu hệ thống
+- Java 17+
+- Maven 3.6+
