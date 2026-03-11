@@ -10,9 +10,9 @@ public class OddEvenController {
     @GetMapping("/checknumber")
     public String checkNumber(@RequestParam int number) {
         if (number % 2 == 0) {
-            return "Số " + number + " là số chẵn";
+            return "S\u1ed1 " + number + " l\u00e0 s\u1ed1 ch\u1eb5n";
         } else {
-            return "Số " + number + " là số lẻ";
+            return "S\u1ed1 " + number + " l\u00e0 s\u1ed1 l\u1ebb";
         }
     }
 }
