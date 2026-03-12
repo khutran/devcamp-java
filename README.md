@@ -45,6 +45,9 @@ Dự án quản lý tài khoản người dùng.
 ### 11. [RandomNumberApp](./RandomNumberApp)
 Dự án Java Console sinh số ngẫu nhiên.
 
+### 12. [CountryRegionApp](./CountryRegionApp)
+Dự án Java Console quản lý Quốc gia và Vùng miền.
+
 ## Cách chạy các dự án
 
 Mỗi dự án là một project Spring Boot độc lập. Để chạy một dự án:
