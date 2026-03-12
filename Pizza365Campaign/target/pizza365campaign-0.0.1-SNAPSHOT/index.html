@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Pizza 365</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        h1 { margin-bottom: 20px; }
+        #message { font-size: 1.25em; font-weight: bold; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Hello Pizza 365</h1>
+    <p id="message">Đang lấy thông tin khuyến mãi...</p>
+    
+    <script>
+        // Lấy tên từ tham số URL nếu có, mặc định là pizza lover
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name') || 'pizza lover';
+
+        fetch(`/devcamp-welcome?name=${encodeURIComponent(name)}`)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('message').innerText = data;
+            })
+            .catch(error => {
+                console.error('Error fetching campaign:', error);
+                document.getElementById('message').innerText = 'Không thể lấy thông tin khuyến mãi.';
+            });
+    </script>
+</body>
+</html>
