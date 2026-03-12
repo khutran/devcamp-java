@@ -13,12 +13,14 @@
 <body>
     <h1>Hello Pizza 365</h1>
     <p id="message">Đang lấy thông tin khuyến mãi...</p>
+    <p id="lucky-lucky">Đang lấy số may mắn...</p>
     
     <script>
         // Lấy tên từ tham số URL nếu có, mặc định là pizza lover
         const urlParams = new URLSearchParams(window.location.search);
         const name = urlParams.get('name') || 'pizza lover';
 
+        // Gọi API khuyến mãi
         fetch(`/devcamp-welcome?name=${encodeURIComponent(name)}`)
             .then(response => response.text())
             .then(data => {
@@ -27,6 +29,21 @@
             .catch(error => {
                 console.error('Error fetching campaign:', error);
                 document.getElementById('message').innerText = 'Không thể lấy thông tin khuyến mãi.';
+            });
+
+        // Gọi API Lucky Dice
+        fetch(`/lucky-dice?username=${encodeURIComponent(name)}`)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('lucky-lucky').innerText = data;
+                document.getElementById('lucky-lucky').style.color = "gold";
+                document.getElementById('lucky-lucky').style.backgroundColor = "black";
+                document.getElementById('lucky-lucky').style.padding = "10px";
+                document.getElementById('lucky-lucky').style.display = "inline-block";
+            })
+            .catch(error => {
+                console.error('Error fetching lucky dice:', error);
+                document.getElementById('lucky-lucky').innerText = 'Không thể lấy số may mắn.';
             });
     </script>
 </body>

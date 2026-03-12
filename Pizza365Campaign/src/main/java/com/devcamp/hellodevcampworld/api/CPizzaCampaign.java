@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDate;
 import java.time.DayOfWeek;
+import java.util.Random;
 
 @RestController
 public class CPizzaCampaign {
@@ -35,5 +36,15 @@ public class CPizzaCampaign {
         }
 
         return "Hello " + name + " ! Hôm nay " + dayString + ", mua 1 tặng 1.";
+    }
+
+    @CrossOrigin
+    @GetMapping("/lucky-dice")
+    public String luckyDice(@RequestParam String username, 
+                            @RequestParam(required = false) String firstname, 
+                            @RequestParam(required = false) String lastname) {
+        Random random = new Random();
+        int luckyNumber = random.nextInt(6) + 1;
+        return "Xin chào: " + username + ", Số may mắn hôm nay của bạn là: " + luckyNumber;
     }
 }
