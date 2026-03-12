@@ -42,8 +42,8 @@ Dự án quản lý các mục trong hóa đơn.
 Dự án quản lý tài khoản người dùng.
 - **Endpoints:** `/accounts`
 
-### 10. [BookAuthorClass](./BookAuthorClass)
-Dự án quản lý thông tin Sách và Tác giả.
+### 11. [RandomNumberApp](./RandomNumberApp)
+Dự án Java Console sinh số ngẫu nhiên.
 
 ## Cách chạy các dự án
 
