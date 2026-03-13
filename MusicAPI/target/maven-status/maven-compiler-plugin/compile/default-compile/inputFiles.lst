@@ -5,3 +5,5 @@
 /Users/khutran/Projects/hoc tap/Java/devcamp-java/MusicAPI/src/main/java/com/devcamp/music/model/BandMember.java
 /Users/khutran/Projects/hoc tap/Java/devcamp-java/MusicAPI/src/main/java/com/devcamp/music/model/Composer.java
 /Users/khutran/Projects/hoc tap/Java/devcamp-java/MusicAPI/src/main/java/com/devcamp/music/model/Person.java
+/Users/khutran/Projects/hoc tap/Java/devcamp-java/MusicAPI/src/main/java/com/devcamp/music/service/AlbumService.java
+/Users/khutran/Projects/hoc tap/Java/devcamp-java/MusicAPI/src/main/java/com/devcamp/music/service/ComposerService.java

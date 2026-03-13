@@ -1,6 +1,8 @@
 com/devcamp/music/model/Album.class
 com/devcamp/music/model/Composer.class
+com/devcamp/music/service/AlbumService.class
 com/devcamp/music/model/Band.class
+com/devcamp/music/service/ComposerService.class
 com/devcamp/music/model/Artist.class
 com/devcamp/music/model/BandMember.class
 com/devcamp/music/model/Person.class
