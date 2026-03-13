@@ -1,0 +1,6 @@
+com/devcamp/shape/model/Square.class
+com/devcamp/shape/model/Rectangle.class
+com/devcamp/shape/controller/ShapeController.class
+com/devcamp/shape/ShapeApiApplication.class
+com/devcamp/shape/model/Shape.class
+com/devcamp/shape/model/Circle.class

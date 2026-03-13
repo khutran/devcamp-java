@@ -69,6 +69,9 @@ Dự án Spring Boot REST API quản lý Khách hàng và Chuyến thăm.
 ### 19. [AnimalAPI](./AnimalAPI)
 Dự án Spring Boot REST API minh họa cấu trúc kế thừa Animal -> Mammal -> Cat/Dog.
 
+### 20. [ShapeAPI](./ShapeAPI)
+Dự án Spring Boot REST API tính toán diện tích và chu vi (Circle, Rectangle, Square).
+
 ## Cách chạy các dự án
 
 Mỗi dự án là một project Spring Boot độc lập. Để chạy một dự án:
