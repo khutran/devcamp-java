@@ -1,4 +1,7 @@
+com/devcamp/customerinvoice/model/Customer.class
+com/devcamp/customerinvoice/controller/CustomerController.class
+com/devcamp/customerinvoice/service/CustomerService.class
 com/devcamp/customerinvoice/CustomerInvoiceApiApplication.class
 com/devcamp/customerinvoice/controller/InvoiceController.class
-com/devcamp/customerinvoice/model/Customer.class
 com/devcamp/customerinvoice/model/Invoice.class
+com/devcamp/customerinvoice/service/InvoiceService.class

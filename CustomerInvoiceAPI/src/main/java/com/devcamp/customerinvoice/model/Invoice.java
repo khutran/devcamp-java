@@ -5,6 +5,9 @@ public class Invoice {
     private Customer customer;
     private double amount;
 
+    public Invoice() {
+    }
+
     public Invoice(int id, Customer customer, double amount) {
         this.id = id;
         this.customer = customer;
@@ -44,11 +47,11 @@ public class Invoice {
     }
 
     public double getAmountAfterDiscount() {
-        return amount * (1.0 - (double) customer.getDiscount() / 100.0);
+        return amount - (amount * customer.getDiscount() / 100.0);
     }
 
     @Override
     public String toString() {
-        return "Invoice[id=" + id + ",customer=" + customer.toString() + ",amount=" + amount + "]";
+        return "Invoice[id=" + id + ",customer=" + customer.getName() + "(" + customer.getID() + ")(" + customer.getDiscount() + "%),amount=" + amount + "]";
     }
 }
