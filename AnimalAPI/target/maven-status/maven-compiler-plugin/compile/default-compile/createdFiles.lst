@@ -1,6 +1,7 @@
-com/devcamp/animal/model/Dog.class
-com/devcamp/animal/model/Animal.class
-com/devcamp/animal/AnimalApiApplication.class
+com/devcamp/animal/service/AnimalService.class
 com/devcamp/animal/controller/AnimalController.class
 com/devcamp/animal/model/Cat.class
 com/devcamp/animal/model/Mammal.class
+com/devcamp/animal/model/Dog.class
+com/devcamp/animal/model/Animal.class
+com/devcamp/animal/AnimalApiApplication.class

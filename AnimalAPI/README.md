@@ -1,35 +1,34 @@
-# AnimalAPI
+# AnimalAPI (56C.70)
 
-Dự án Spring Boot REST API minh họa cấu trúc kế thừa: Animal -> Mammal -> Cat/Dog.
+Dự án Spring Boot REST API minh họa kế thừa và đa hình với các loài động vật (Mèo và Chó), hỗ trợ lọc danh sách và đóng gói WAR.
+
+## Hierarchy
+`Animal` -> `Mammal` -> `Cat` / `Dog`
 
 ## API Endpoints
 
-### 1. Lấy danh sách mèo
+### 1. Lấy danh sách con mèo
 - **URL:** `/cats`
 - **Method:** `GET`
-- **Mô tả:** Trả về danh sách (`ArrayList`) các đối tượng `Cat`.
-- **Logic:** Khởi tạo 3 mèo, gọi phương thức `greets()` (in "Meow" ra console).
+- **Mô tả:** Trả về danh sách `Cat` được lọc từ một danh sách chung `Animal` bằng toán tử `instanceof`.
 
-### 2. Lấy danh sách chó
+### 2. Lấy danh sách con chó
 - **URL:** `/dogs`
 - **Method:** `GET`
-- **Mô tả:** Trả về danh sách (`ArrayList`) các đối tượng `Dog`.
-- **Logic:** 
-    - Khởi tạo 3 chó, gọi phương thức `greets()` (in "Woof" ra console).
-    - Gọi phương thức `greets(anotherDog)` (in "Woooof" ra console).
+- **Mô tả:** Trả về danh sách `Dog` được lọc từ một danh sách chung `Animal` bằng toán tử `instanceof`.
 
-## Cấu trúc kế thừa
-- `Animal`: Chứa `name`.
-- `Mammal`: Kế thừa `Animal`.
-- `Cat` & `Dog`: Kế thừa `Mammal`, triển khai phương thức `greets()`.
+## Tính năng nổi bật
+- Sử dụng inheritance để quản lý các thuộc tính chung.
+- Định dạng `toString` lồng nhau theo cấp bậc kế thừa: `Dog[Mamaml[Animal[name="?"]]]`.
+- Phương thức `greets()` riêng biệt cho từng loài.
+- Đóng gói WAR để triển khai lên Tomcat.
 
 ## Cách chạy
-1. Biên dịch và đóng gói:
+1. Biên dịch và đóng gói thành file WAR:
    ```bash
    mvn clean package
    ```
-2. Chạy ứng dụng:
+2. Deploy file `target/animal-api-0.0.1-SNAPSHOT.war` lên Tomcat hoặc chạy trực tiếp:
    ```bash
    mvn spring-boot:run
    ```
-3. Truy cập: `http://localhost:8080/cats` hoặc `http://localhost:8080/dogs`

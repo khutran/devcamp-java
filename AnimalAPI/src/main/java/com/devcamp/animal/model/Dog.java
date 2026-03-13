@@ -1,6 +1,10 @@
 package com.devcamp.animal.model;
 
 public class Dog extends Mammal {
+
+    public Dog() {
+    }
+
     public Dog(String name) {
         super(name);
     }
