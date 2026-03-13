@@ -78,6 +78,9 @@ Dự án Spring Boot REST API quản lý Quốc gia và Vùng miền sử dụng
 ### 22. [ArtistAlbumAPI](./ArtistAlbumAPI)
 Dự án Spring Boot REST API quản lý Nghệ sĩ và Album sử dụng Service và đóng gói WAR.
 
+### 23. [BookAuthorAPI](./BookAuthorAPI)
+Dự án Spring Boot REST API quản lý Sách và Tác giả với logic lọc dữ liệu và đóng gói WAR.
+
 ## Cách chạy các dự án
 
 Mỗi dự án là một project Spring Boot độc lập. Để chạy một dự án:

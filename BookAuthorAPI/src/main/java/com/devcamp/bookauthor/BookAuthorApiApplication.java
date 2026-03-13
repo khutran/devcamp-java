@@ -2,9 +2,16 @@ package com.devcamp.bookauthor;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class BookAuthorApiApplication {
+public class BookAuthorApiApplication extends SpringBootServletInitializer {
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(BookAuthorApiApplication.class);
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(BookAuthorApiApplication.class, args);

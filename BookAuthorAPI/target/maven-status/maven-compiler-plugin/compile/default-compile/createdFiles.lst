@@ -1,4 +1,7 @@
+com/devcamp/bookauthor/controller/BookController.class
 com/devcamp/bookauthor/BookAuthorApiApplication.class
 com/devcamp/bookauthor/model/Author.class
-com/devcamp/bookauthor/controller/BookController.class
 com/devcamp/bookauthor/model/Book.class
+com/devcamp/bookauthor/service/AuthorService.class
+com/devcamp/bookauthor/controller/AuthorController.class
+com/devcamp/bookauthor/service/BookService.class
