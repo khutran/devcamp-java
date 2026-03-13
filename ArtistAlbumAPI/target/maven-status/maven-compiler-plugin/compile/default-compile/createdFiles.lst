@@ -1,0 +1,7 @@
+com/devcamp/artistalbum/model/Artist.class
+com/devcamp/artistalbum/model/Album.class
+com/devcamp/artistalbum/ArtistAlbumApiApplication.class
+com/devcamp/artistalbum/controller/AlbumController.class
+com/devcamp/artistalbum/service/ArtistService.class
+com/devcamp/artistalbum/service/AlbumService.class
+com/devcamp/artistalbum/controller/ArtistController.class

@@ -1,0 +1,20 @@
+package com.devcamp.artistalbum;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+
+@SpringBootApplication
+public class ArtistAlbumApiApplication extends SpringBootServletInitializer {
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(ArtistAlbumApiApplication.class);
+	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(ArtistAlbumApiApplication.class, args);
+	}
+
+}
