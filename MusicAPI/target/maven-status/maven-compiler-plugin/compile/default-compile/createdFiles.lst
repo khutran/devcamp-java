@@ -6,4 +6,6 @@ com/devcamp/music/service/ComposerService.class
 com/devcamp/music/model/Artist.class
 com/devcamp/music/model/BandMember.class
 com/devcamp/music/model/Person.class
+com/devcamp/music/controller/AlbumController.class
 com/devcamp/music/MusicApiApplication.class
+com/devcamp/music/controller/ComposerController.class
