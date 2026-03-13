@@ -51,6 +51,9 @@ Dự án Java Console quản lý Quốc gia và Vùng miền.
 ### 13. [CircleCylinderAPI](./CircleCylinderAPI)
 Dự án Spring Boot REST API tính diện tích hình tròn và thể tích hình trụ.
 
+### 14. [BookAuthorAPI](./BookAuthorAPI)
+Dự án Spring Boot REST API quản lý Tác giả và Sách.
+
 ## Cách chạy các dự án
 
 Mỗi dự án là một project Spring Boot độc lập. Để chạy một dự án:
