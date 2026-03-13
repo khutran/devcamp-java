@@ -57,6 +57,9 @@ Dự án Spring Boot REST API quản lý Tác giả và Sách.
 ### 15. [BookAuthorAPIv2](./BookAuthorAPIv2)
 Dự án Spring Boot REST API quản lý Tác giả và Sách (Phiên bản 2.0 - Nhiều tác giả).
 
+### 16. [CustomerInvoiceAPI](./CustomerInvoiceAPI)
+Dự án Spring Boot REST API quản lý Khách hàng và Hóa đơn.
+
 ## Cách chạy các dự án
 
 Mỗi dự án là một project Spring Boot độc lập. Để chạy một dự án:
