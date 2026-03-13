@@ -72,6 +72,9 @@ Dự án Spring Boot REST API minh họa cấu trúc kế thừa Animal -> Mamma
 ### 20. [ShapeAPI](./ShapeAPI)
 Dự án Spring Boot REST API tính toán diện tích và chu vi (Circle, Rectangle, Square).
 
+### 21. [CountryRegionAPI](./CountryRegionAPI)
+Dự án Spring Boot REST API quản lý Quốc gia và Vùng miền sử dụng Service và đóng gói WAR.
+
 ## Cách chạy các dự án
 
 Mỗi dự án là một project Spring Boot độc lập. Để chạy một dự án:
