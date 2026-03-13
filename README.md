@@ -60,6 +60,9 @@ Dự án Spring Boot REST API quản lý Tác giả và Sách (Phiên bản 2.0 
 ### 16. [CustomerInvoiceAPI](./CustomerInvoiceAPI)
 Dự án Spring Boot REST API quản lý Khách hàng và Hóa đơn.
 
+### 17. [CustomerAccountAPI](./CustomerAccountAPI)
+Dự án Spring Boot REST API quản lý Khách hàng và Tài khoản.
+
 ## Cách chạy các dự án
 
 Mỗi dự án là một project Spring Boot độc lập. Để chạy một dự án:
