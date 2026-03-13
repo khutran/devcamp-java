@@ -48,6 +48,9 @@ Dự án Java Console sinh số ngẫu nhiên.
 ### 12. [CountryRegionApp](./CountryRegionApp)
 Dự án Java Console quản lý Quốc gia và Vùng miền.
 
+### 13. [CircleCylinderAPI](./CircleCylinderAPI)
+Dự án Spring Boot REST API tính diện tích hình tròn và thể tích hình trụ.
+
 ## Cách chạy các dự án
 
 Mỗi dự án là một project Spring Boot độc lập. Để chạy một dự án:
