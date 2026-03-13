@@ -1,0 +1,4 @@
+com/devcamp/bookauthorv2/BookAuthorApiV2Application.class
+com/devcamp/bookauthorv2/model/Book.class
+com/devcamp/bookauthorv2/model/Author.class
+com/devcamp/bookauthorv2/controller/BookController.class
