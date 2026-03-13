@@ -1,9 +1,15 @@
 package com.devcamp.customeraccount.model;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Account {
     private int id;
     private Customer customer;
     private double balance = 0.0;
+
+    public Account() {
+    }
 
     public Account(int id, Customer customer, double balance) {
         this.id = id;
@@ -52,6 +58,7 @@ public class Account {
 
     @Override
     public String toString() {
-        return customer.toString() + " balance=$" + String.format("%.2f", balance);
+        BigDecimal bd = new BigDecimal(balance).setScale(2, RoundingMode.HALF_UP);
+        return customer.toString() + " balance=$" + bd.toString();
     }
 }
