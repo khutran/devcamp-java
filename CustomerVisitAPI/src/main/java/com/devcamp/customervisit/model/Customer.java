@@ -5,6 +5,9 @@ public class Customer {
     private boolean member = false;
     private String memberType;
 
+    public Customer() {
+    }
+
     public Customer(String name) {
         this.name = name;
     }

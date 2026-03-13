@@ -1,26 +1,30 @@
-# CustomerVisitAPI
+# CustomerVisitAPI (56C.60)
 
-Dự án Spring Boot REST API quản lý Khách hàng và Chuyến thăm, minh họa quan hệ thực thể và tính toán chi phí dịch vụ/sản phẩm.
+Dự án Spring Boot REST API quản lý Khách hàng và các chuyến thăm (phiên bản nâng cao 56C.60), hỗ trợ tính toán tổng chi phí và đóng gói WAR.
 
 ## API Endpoints
 
 ### 1. Lấy danh sách chuyến thăm
 - **URL:** `/visits`
 - **Method:** `GET`
-- **Mô tả:** Trả về danh sách (`ArrayList`) các đối tượng `Visit`. Mỗi chuyến thăm liên kết với một đối tượng `Customer`.
-- **Logic:** 
-    - Khởi tạo 3 khách hàng (Alice - Gold, Bob - Silver, Charlie - Non-member).
-    - Khởi tạo 3 chuyến thăm với các chi phí dịch vụ và sản phẩm khác nhau.
-    - Tính toán tổng chi phí (`getTotalExpense()`).
-    - In thông tin `toString()` của khách hàng và chuyến thăm ra console của server.
+- **Mô tả:** Trả về danh sách `Visit`, bao gồm thông tin khách hàng, ngày thăm, chi phí dịch vụ, chi phí sản phẩm và tổng chi phí (`totalExpense`).
+
+### 2. Lấy danh sách khách hàng
+- **URL:** `/customers`
+- **Method:** `GET`
+- **Mô tả:** Trả về danh sách `Customer` với thông tin hạng thành viên (nếu có).
+
+## Tính năng nổi bật
+- Quản lý thông tin khách hàng với thuộc tính thẻ thành viên (Gold, Silver, etc.).
+- Tự động tính toán tổng chi phí cho mỗi lần thăm (`serviceExpense + productExpense`).
+- Hỗ trợ đóng gói dạng WAR để deploy lên máy chủ Tomcat.
 
 ## Cách chạy
-1. Biên dịch và đóng gói:
+1. Biên dịch và đóng gói thành file WAR:
    ```bash
    mvn clean package
    ```
-2. Chạy ứng dụng:
+2. Deploy file `target/customervisit-api-0.0.1-SNAPSHOT.war` lên Tomcat hoặc chạy trực tiếp:
    ```bash
    mvn spring-boot:run
    ```
-3. Truy cập: `http://localhost:8080/visits`

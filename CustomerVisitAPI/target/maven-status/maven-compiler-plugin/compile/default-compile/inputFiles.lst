@@ -1,4 +1,7 @@
 /Users/khutran/Projects/hoc tap/Java/devcamp-java/CustomerVisitAPI/src/main/java/com/devcamp/customervisit/CustomerVisitApiApplication.java
+/Users/khutran/Projects/hoc tap/Java/devcamp-java/CustomerVisitAPI/src/main/java/com/devcamp/customervisit/controller/CustomerController.java
 /Users/khutran/Projects/hoc tap/Java/devcamp-java/CustomerVisitAPI/src/main/java/com/devcamp/customervisit/controller/VisitController.java
 /Users/khutran/Projects/hoc tap/Java/devcamp-java/CustomerVisitAPI/src/main/java/com/devcamp/customervisit/model/Customer.java
 /Users/khutran/Projects/hoc tap/Java/devcamp-java/CustomerVisitAPI/src/main/java/com/devcamp/customervisit/model/Visit.java
+/Users/khutran/Projects/hoc tap/Java/devcamp-java/CustomerVisitAPI/src/main/java/com/devcamp/customervisit/service/CustomerService.java
+/Users/khutran/Projects/hoc tap/Java/devcamp-java/CustomerVisitAPI/src/main/java/com/devcamp/customervisit/service/VisitService.java

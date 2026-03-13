@@ -8,6 +8,9 @@ public class Visit {
     private double serviceExpense;
     private double productExpense;
 
+    public Visit() {
+    }
+
     public Visit(Customer customer, Date date) {
         this.customer = customer;
         this.date = date;
@@ -21,16 +24,16 @@ public class Visit {
         return serviceExpense;
     }
 
-    public void setServiceExpense(double ex) {
-        this.serviceExpense = ex;
+    public void setServiceExpense(double serviceExpense) {
+        this.serviceExpense = serviceExpense;
     }
 
     public double getProductExpense() {
         return productExpense;
     }
 
-    public void setProductExpense(double ex) {
-        this.productExpense = ex;
+    public void setProductExpense(double productExpense) {
+        this.productExpense = productExpense;
     }
 
     public double getTotalExpense() {
@@ -39,6 +42,6 @@ public class Visit {
 
     @Override
     public String toString() {
-        return "Visit[customer=" + customer.toString() + ",date=" + date + ",serviceExpense=" + serviceExpense + ",productExpense=" + productExpense + "]";
+        return "Visit[customer=" + customer + ",date=" + date + ",serviceExpense=" + serviceExpense + ",productExpense=" + productExpense + "]";
     }
 }
