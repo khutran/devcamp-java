@@ -66,6 +66,9 @@ Dự án Spring Boot REST API quản lý Khách hàng và Tài khoản.
 ### 18. [CustomerVisitAPI](./CustomerVisitAPI)
 Dự án Spring Boot REST API quản lý Khách hàng và Chuyến thăm.
 
+### 19. [AnimalAPI](./AnimalAPI)
+Dự án Spring Boot REST API minh họa cấu trúc kế thừa Animal -> Mammal -> Cat/Dog.
+
 ## Cách chạy các dự án
 
 Mỗi dự án là một project Spring Boot độc lập. Để chạy một dự án:
