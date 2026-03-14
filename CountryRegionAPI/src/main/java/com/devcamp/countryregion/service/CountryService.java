@@ -34,6 +34,27 @@ public class CountryService {
         ));
         countries.add(new Country("JP", "Japan", jpRegions));
 
+        // Country 4: United States (56D.20 update)
+        ArrayList<Region> usRegions = new ArrayList<>(Arrays.asList(
+            new Region("NY", "New York"),
+            new Region("CA", "California")
+        ));
+        countries.add(new Country("US", "United States", usRegions));
+
+        // Country 5: France (56D.20 update)
+        ArrayList<Region> frRegions = new ArrayList<>(Arrays.asList(
+            new Region("PA", "Paris"),
+            new Region("LY", "Lyon")
+        ));
+        countries.add(new Country("FR", "France", frRegions));
+
+        // Country 6: Germany (56D.20 update)
+        ArrayList<Region> deRegions = new ArrayList<>(Arrays.asList(
+            new Region("BE", "Berlin"),
+            new Region("MU", "Munich")
+        ));
+        countries.add(new Country("DE", "Germany", deRegions));
+
         return countries;
     }
 
