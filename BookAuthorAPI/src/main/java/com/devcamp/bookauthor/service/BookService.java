@@ -32,6 +32,27 @@ public class BookService {
             new Author("Watanabe", "watanabe@gmail.com", 'm')
         ));
         books.add(new Book("React Masterclass", authors3, 34.99, 20));
+        
+        // Book 4
+        ArrayList<Author> authors4 = new ArrayList<>(Arrays.asList(
+            new Author("Bloch", "bloch@gmail.com", 'm'),
+            new Author("JavaExpert", "expert@gmail.com", 'm')
+        ));
+        books.add(new Book("Effective Java", authors4, 45.00, 10));
+
+        // Book 5
+        ArrayList<Author> authors5 = new ArrayList<>(Arrays.asList(
+            new Author("Robert Martin", "unclebob@gmail.com", 'm'),
+            new Author("CleanCoder", "coder@gmail.com", 'f')
+        ));
+        books.add(new Book("Clean Code", authors5, 42.50, 8));
+
+        // Book 6
+        ArrayList<Author> authors6 = new ArrayList<>(Arrays.asList(
+            new Author("Fowler", "martin@gmail.com", 'm'),
+            new Author("Beck", "kent@gmail.com", 'm')
+        ));
+        books.add(new Book("Refactoring", authors6, 50.00, 12));
 
         return books;
     }
