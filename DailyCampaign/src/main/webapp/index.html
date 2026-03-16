@@ -310,6 +310,12 @@
                   <input type="text" class="form-control" id="input-message" placeholder="Lời nhắn" />
                 </div>
                 <div class="form-group">
+                  <label for="select-drink">Đồ uống</label>
+                  <select class="form-control" id="select-drink">
+                    <option value="">Chọn đồ uống</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label for="inp-voucher">Mã giảm giá ( Voucher ID)</label>
                   <input type="text" class="form-control" id="input-voucher" placeholder="Mã voucher..." />
                 </div>
@@ -353,7 +359,7 @@
   $(document).ready(function() {
       // Gọi API Daily Campaign
       $.ajax({
-          url: "http://localhost:8081/campaigns/",
+          url: "http://localhost:8088/campaigns/",
           method: "GET",
           success: function(data) {
               $("#span-campaign-text").text(data);
@@ -363,7 +369,73 @@
               console.error("Error fetching daily campaign:", error);
           }
       });
+
+      // Gọi API Menu Combo (Task 57.20)
+      $.ajax({
+          url: "http://localhost:8082/combomenu/",
+          method: "GET",
+          success: function(data) {
+              console.log("Combo menus fetched:", data);
+              updatePricingPanel(data);
+          },
+          error: function(error) {
+              console.error("Error fetching combo menus:", error);
+          }
+      });
+
+      // Gọi API Đồ uống (Task 57.30)
+      $.ajax({
+          url: "http://localhost:8083/drinks/",
+          method: "GET",
+          success: function(data) {
+              console.log("Drinks fetched:", data);
+              var selectDrink = $("#select-drink");
+              data.forEach(function(drink) {
+                  $("<option>", {
+                      value: drink.maNuocUong,
+                      text: drink.tenNuocUong
+                  }).appendTo(selectDrink);
+              });
+          },
+          error: function(error) {
+              console.error("Error fetching drinks:", error);
+          }
+      });
   });
+
+  function updatePricingPanel(menus) {
+    if (!menus || menus.length < 3) return;
+
+    // S (Small)
+    const small = menus.find(m => m.menuName === 'S');
+    if (small) {
+        $("#combo .card:eq(0) b:eq(0)").text(small.duongKinhCM + " cm");
+        $("#combo .card:eq(0) b:eq(1)").text(small.suongNuong);
+        $("#combo .card:eq(0) b:eq(2)").text(small.saladGr + " gr");
+        $("#combo .card:eq(0) b:eq(3)").text(small.drink);
+        $("#combo .card:eq(0) b:eq(4)").text(small.priceVND.toLocaleString());
+    }
+
+    // M (Medium)
+    const medium = menus.find(m => m.menuName === 'M');
+    if (medium) {
+        $("#combo .card:eq(1) b:eq(0)").text(medium.duongKinhCM + " cm");
+        $("#combo .card:eq(1) b:eq(1)").text(medium.suongNuong);
+        $("#combo .card:eq(1) b:eq(2)").text(medium.saladGr + " gr");
+        $("#combo .card:eq(1) b:eq(3)").text(medium.drink);
+        $("#combo .card:eq(1) b:eq(4)").text(medium.priceVND.toLocaleString());
+    }
+
+    // L (Large)
+    const large = menus.find(m => m.menuName === 'L');
+    if (large) {
+        $("#combo .card:eq(2) b:eq(0)").text(large.duongKinhCM + " cm");
+        $("#combo .card:eq(2) b:eq(1)").text(large.suongNuong);
+        $("#combo .card:eq(2) b:eq(2)").text(large.saladGr + " gr");
+        $("#combo .card:eq(2) b:eq(3)").text(large.drink);
+        $("#combo .card:eq(2) b:eq(4)").text(large.priceVND.toLocaleString());
+    }
+  }
 
   /*** REGION 1 - Global variables - Vùng khai báo biến, hằng số, tham số TOÀN CỤC */
   // Mảng danh sách các mã giảm giá
